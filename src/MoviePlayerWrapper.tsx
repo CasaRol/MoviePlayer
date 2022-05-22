@@ -53,7 +53,15 @@ const MoviePlayerWrapper: React.FC<myProps> = (props) => {
         <div className="m-2 general-bg">
             <h2>{props.videoTitle}</h2>
             <div className="d-flex justify-content-center player-wrapper general-bg">
-                <ReactPlayer className="m-2 react-player general-bg" width="65%" height="65%" ref={player} url={props.myUrl} controls={false} playing={playing} pip={pip} volume={(volume / 100)} muted={mute} />
+                <ReactPlayer className="m-2 react-player general-bg" width="65%" height="65%"
+                    ref={player}
+                    url={props.myUrl}
+                    controls={false}
+                    playing={playing}
+                    pip={pip}
+                    volume={(volume / 100)}
+                    muted={mute}
+                />
             </div>
             <div className="d-flex justify-content-center rounded-pill w-50 m-auto">
                 <div>
