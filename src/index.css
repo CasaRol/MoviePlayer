@@ -1,3 +1,15 @@
+html {
+    background-color: #a0a1a1
+}
+
+.general-bg {
+    background-color: #a0a1a1;
+}
+
+.contrast-bg {
+    background-color: #8b8c8c;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import ReactPlayer from 'react-player'
 import './player.css'
+import './index.css'
 
 
 interface myProps {
@@ -49,12 +50,12 @@ const MoviePlayerWrapper: React.FC<myProps> = (props) => {
     }
 
     return (
-        <div className="m-2">
+        <div className="m-2 general-bg">
             <h2>{props.videoTitle}</h2>
-            <div className="d-flex justify-content-center player-wrapper">
-                <ReactPlayer className="m-2 border border-dark react-player" width="65%" height="65%" ref={player} url={props.myUrl} controls={false} playing={playing} pip={pip} volume={(volume / 100)} muted={mute} />
+            <div className="d-flex justify-content-center player-wrapper general-bg">
+                <ReactPlayer className="m-2 react-player general-bg" width="65%" height="65%" ref={player} url={props.myUrl} controls={false} playing={playing} pip={pip} volume={(volume / 100)} muted={mute} />
             </div>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center rounded-pill w-50 m-auto">
                 <div>
                     <button className="btn btn-secondary m-2" onClick={() => { seeking(-10) }} >minus 10s</button>
                     <button className="btn btn-secondary m-2" onClick={() => { playPause() }}> {playing ? "Pause" : "Play"} </button>
@@ -75,8 +76,9 @@ const MoviePlayerWrapper: React.FC<myProps> = (props) => {
                             setVolume(event.target.valueAsNumber)
 
                         }} />
+                    <button className="btn btn-secondary m-2" onClick={() => { pipAction() }}>PIP</button>
                 </div>
-                <button className="btn btn-secondary m-2" onClick={() => { pipAction() }}>PIP</button>
+
             </div>
         </div>
     )

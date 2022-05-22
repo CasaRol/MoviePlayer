@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import MoviePlayerWrapper from './MoviePlayerWrapper'
+import './index.css'
 
 const VideoDisplay: React.FC = () => {
 
@@ -16,7 +17,7 @@ const VideoDisplay: React.FC = () => {
     }, [videoId])
 
     return (
-        <div>
+        <div className="general-bg">
             <h1>VideoDisplay</h1>
             {videoUrl !== undefined &&
                 <MoviePlayerWrapper myUrl={videoUrl} videoTitle="Station Ballerup udkald - ABA" />
